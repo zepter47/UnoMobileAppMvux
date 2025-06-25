@@ -57,7 +57,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
 
-                            <Grid Margin="10 5 5 0" BorderBrush="HotPink" BorderThickness=".3" CornerRadius="5"
+                            <Grid Margin="10 5 5 0" BorderBrush="HotPink" BorderThickness=".6" CornerRadius="5"
                           Background="{ThemeResource OnSecondaryColor}" Padding="8">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*"/>
