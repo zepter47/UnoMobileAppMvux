@@ -29,6 +29,6 @@ public interface IAppNative
     //Task<IApiResponse> AddHouseNumber([Body] House HNumber);
 
     [Get("/api/Tenants/TenantsDetails")]
-    Task<ApiResponse<ObservableCollection<TenantDetails>>> GetTenantDetails();
+    Task<ApiResponse<IImmutableList<TenantDetails>>> GetTenantDetails();
 
 }

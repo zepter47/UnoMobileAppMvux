@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:EstatesUpdated.View"
     xmlns:ut="using:Uno.Themes"
+    xmlns:models="using:EstatesUpdated.Models"
     xmlns:utu="using:Uno.Toolkit.UI"
     xmlns:vvm="using:EstatesUpdated.Vm"
     xmlns:uen="using:Uno.Extensions.Navigation.UI"
@@ -13,9 +14,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.DataContext>
-        <vvm:ResidentsListViewModel/>
-    </Page.DataContext>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -45,7 +43,7 @@
 
         <mvux:FeedView Source="{Binding TenantsList}" Grid.Row="3">
 
-            <DataTemplate>
+            <DataTemplate >
                 <ListView ItemsSource="{Binding Data}"  Margin="9 2 5 0" uen:Navigation.Request="ViewResidents">
 
                     <ListView.ItemsPanel>
@@ -55,7 +53,7 @@
                     </ListView.ItemsPanel>
 
                     <ListView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate x:DataType="models:TenantDetails">
 
                             <Grid Margin="10 5 5 0" BorderBrush="HotPink" BorderThickness=".6" CornerRadius="5"
                           Background="{ThemeResource OnSecondaryColor}" Padding="8">

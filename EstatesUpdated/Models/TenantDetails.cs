@@ -6,9 +6,33 @@ using System.Threading.Tasks;
 using Windows.Networking;
 
 namespace EstatesUpdated.Models;
-public partial record TenantDetails()
+public partial record TenantDetails
 {
-    public int TenantId { get; init; }
+    public TenantDetails(string? firstName, string? lastName, string? ninNumber, DateOnly birthDate,
+        string? gender, string? phoneNumber, int occupantsNumber, int maritalstatusId, string? nextofkinName,
+        int nokRelationshipId, string? nokPhonenumber, int houseId, DateTime addedOn, string? tdMaritalstatus,
+        string? tdNokRelationship, string? tdHouse)
+    {
+        //TenantId = tenantId;
+        FirstName = firstName;
+        LastName = lastName;
+        NinNumber = ninNumber;
+        BirthDate = birthDate;
+        Gender = gender;
+        PhoneNumber = phoneNumber;
+        OccupantsNumber = occupantsNumber;
+        MaritalstatusId = maritalstatusId;
+        NextofkinName = nextofkinName;
+        NokRelationshipId = nokRelationshipId;
+        NokPhonenumber = nokPhonenumber;
+        HouseId = houseId;
+        AddedOn = addedOn;
+        TdMaritalstatus = tdMaritalstatus;
+        TdNokRelationship = tdNokRelationship;
+        TdHouse = tdHouse;
+    }
+
+    //public int TenantId { get; init; }
 
     public string? FirstName { get; init; }
 

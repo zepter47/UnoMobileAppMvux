@@ -27,6 +27,5 @@ public sealed partial class ResidentsListPage : Page
     {
         this.InitializeComponent();
 
-      DataContext = new Vm.ResidentsListViewModel();
     }
 }

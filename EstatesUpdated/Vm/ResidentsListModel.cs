@@ -12,8 +12,6 @@ public partial record ResidentsListModel
 {
     private readonly ITenantService _tenantService;
 
-    public ResidentsListModel() { }
-
     public ResidentsListModel(ITenantService tenantService)
     {
         _tenantService = tenantService;
